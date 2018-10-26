@@ -15,7 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url, include
+from rest_framework import routers
+from DRFContact.DRFContact import views
+
+router = routers.DefaultRouter()
+router.register(r'addresses', views.AddressViewSet)
+router.register(r'phones', views.PhoneViewSet)
+router.register(r'web_contacts', views.WebViewSet)
+router.register(r'social_media_contacts', views.SocialMediaViewSet)
+router.register(r'contacts', views.ContactViewSet)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    url(r'^', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('admin/', admin.site.urls)
 ]

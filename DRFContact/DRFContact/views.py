@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from localworkforce.contact.serializers import AddressSerializer, PhoneSerializer, WebSerializer, SocialMediaSerializer, ContactSerializer
-from localworkforce.contact.models import Address, Phone, Web, SocialMedia, Contact
+from DRFContact.DRFContact.serializers import AddressSerializer, PhoneSerializer, WebSerializer, SocialMediaSerializer, ContactSerializer
+from DRFContact.DRFContact.models import Address, Phone, Web, SocialMedia, Contact
 
 # Create your views here.
 

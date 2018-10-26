@@ -1,6 +1,5 @@
 from rest_framework import serializers
-from localworkforce.users.serializers import UserSerializer
-from localworkforce.contact.models import Address, Phone, Web, SocialMedia, Contact
+from DRFContact.DRFContact.models import Address, Phone, Web, SocialMedia, Contact
 
 class AddressSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
